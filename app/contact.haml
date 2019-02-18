@@ -1,0 +1,51 @@
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+!!!
+%html{:lang => "en"}
+  %head
+    = render ('app/partials/head.haml')
+  %body
+    #page
+      %a.js-burgue-nav-toggle.burgue-nav-toggle{:href => "#"}
+        %i
+      = render ('app/partials/aside/_aside.haml')
+  
+      #main
+        %section.ftco-section.contact-section
+          .container
+            .row.d-flex.mb-5.contact-info
+              .col-md-12.mb-4
+                %h2.h4.font-weight-bold Contact Information
+              .w-100
+              .col-md-4
+                %p
+                  %span Address:
+                %span{style: "color: #e10051;"} Punto fijo, Falcón, Venezuela.
+              .col-md-4
+                %p
+                  %span Phone:
+                %a{:href => "tel://4120684410"} + 58 412 0684 410
+                %br/
+                %a{:href => "tel://4167501251"} + 58 416 7501 250
+              .col-md-4
+                %p
+                  %span Email:
+                %a{:href => "mailto:gladibethdelosa@gmail.com"} Gladibethdelosa@gmail.com
+             
+            -# .row.block-9
+            -#   .col-md-6.order-md-last.pr-md-5
+            -#     %form{:action => "#"}
+            -#       .form-group
+            -#         %input.form-control{:placeholder => "Your Name", :type => "text"}/
+            -#       .form-group
+            -#         %input.form-control{:placeholder => "Your Email", :type => "text"}/
+            -#       .form-group
+            -#         %textarea.form-control{:cols => "30", :id => "", :name => "", :placeholder => "Message", :rows => "7"}
+            -#       .form-group
+            -#         %input.btn.btn-primary.py-3.px-4.float-right{:type => "submit", :value => "Send Message"}/
+            -#   .col-md-6
+            -#     #map
+    
+    = render ('app/partials/footer.haml')

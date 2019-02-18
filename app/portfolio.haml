@@ -1,0 +1,51 @@
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+!!!
+%html{:lang => "en"}
+  %head
+    = render ('app/partials/head.haml')
+  %body
+    #page
+      %a.js-burgue-nav-toggle.burgue-nav-toggle{:href => "#"}
+        %i
+      = render ('app/partials/aside/_aside.haml')
+  
+      #main
+        %section.ftco-section-2
+          .technology
+            .row.no-gutters
+              .col-md-4
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://digimartve.com/", :style => "background-image: url(assets/img/image_1.png);"}
+                  .overlay
+                  .text.text-center
+                    %h3 Digimart
+                    %span Technology
+              .col-md-4
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://sicegroup.co/", :style => "background-image: url(assets/img/image_2.png);"}
+                  .overlay
+                  .text.text-center
+                    %h3 Slice Group
+                    %span Technology
+              .col-md-4
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "http://photogrammar.com/", :style => "background-image: url(assets/img/image_3.png);"}
+                  .overlay
+                  .text.text-center
+                    %h3 Photogrammar
+                    %span Technology
+              .col-md-4
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://caderco.slicegroup.co/", :style => "background-image: url(assets/img/image_4.png);"}
+                  .overlay
+                  .text.text-center
+                    %h3 Caderco
+                    %span Technology
+              -# .col-md-4
+              -#   %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "#", :style => "background-image: url(assets/img/image_5.png);"}
+              -#     .overlay
+              -#     .text.text-center
+              -#       %h3 Astivik
+              -#       %span Technology
+              
+
+    = render ('app/partials/footer.haml')
