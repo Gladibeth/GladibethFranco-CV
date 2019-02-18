@@ -9214,7 +9214,7 @@ h1, h2, h3, h4, h5,
   display: inline-block;
   text-align: center;
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #aside #aside-logo a span {
@@ -9240,6 +9240,7 @@ h1, h2, h3, h4, h5,
   position: relative;
   padding: 10px 0;
   font-family: "Montserrat", Arial, sans-serif;
+  font-size: 17px;
   transition: 0.3s 300ms linear 0s;
 }
 

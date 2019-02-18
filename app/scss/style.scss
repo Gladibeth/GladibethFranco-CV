@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5,
 			display: inline-block;
 			text-align: center;
 			color: $white;
-			font-size: 15px;
+			font-size: 20px;
 			span{
 				color: lighten($black,80%);
 			}
@@ -147,6 +147,7 @@ h1, h2, h3, h4, h5,
 					position: relative;
 					padding: 10px 0;
 					font-family: $font-primary;
+					font-size: 17px;
 					@include transition(.3s);
 					&:after {
 						content: "";
