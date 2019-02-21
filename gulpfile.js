@@ -16,20 +16,20 @@ var browserSync = require('browser-sync').create();
 gulp.task('browserSync', function () {
   browserSync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: 'docs'
     },
   })
 })
 
 
 
-//Delete dist folder
-gulp.task('clean:dist', function () {
-  return del.sync('dist');
+//Delete docs folder
+gulp.task('clean:docs', function () {
+  return del.sync('docs');
 })
 //------------ JQUERY
 gulp.task('add_jquery', function () {
-  return gulp.src('node_modules/jquery/dist/jquery.min.js')
+  return gulp.src('node_modules/jquery/docs/jquery.min.js')
     .pipe(gulp.dest('app/js'));
 });
 
@@ -41,10 +41,10 @@ gulp.task('remove_jquery', function () {
 
 //------ BOOTSTRAP ---------
 gulp.task('add_bootstrap', function () {
-  var bootstrap_js = gulp.src('node_modules/bootstrap/dist/js/bootstrap.js')
+  var bootstrap_js = gulp.src('node_modules/bootstrap/docs/js/bootstrap.js')
     .pipe(gulp.dest('app/js'));
 
-  var bootstrap_css = gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+  var bootstrap_css = gulp.src('node_modules/bootstrap/docs/css/bootstrap.min.css')
     .pipe(gulp.dest('app/css'));
 
   return merge(bootstrap_js, bootstrap_css)
@@ -60,7 +60,7 @@ gulp.task('remove_bootstrap', function () {
 //------ MATERIALIZE ----------
 
 gulp.task('add_materialize', function () {
-  var material_js = gulp.src('node_modules/materialize-css/dist/js/materialize.min.js')
+  var material_js = gulp.src('node_modules/materialize-css/docs/js/materialize.min.js')
     .pipe(gulp.dest('app/js'));
 
   var material_css = gulp.src('node_modules/materialize-css/sass/materialize.scss')
@@ -75,24 +75,24 @@ gulp.task('add_materialize', function () {
 
 //Save cache and minify images
 gulp.task('images', function () {
-  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg|pdf|webp)')
     // Caching images that ran through imagemin
     .pipe(cache(imagemin({
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/assets/img'))
+    .pipe(gulp.dest('docs/assets/img'))
 });
 
 
-//Move fonts to dist/fonts
+//Move fonts to docs/fonts
 gulp.task('fonts', function () {
   return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/assets/fonts'))
+    .pipe(gulp.dest('docs/assets/fonts'))
 });
 //Move new .css files
 gulp.task('css', function () {
   return gulp.src('app/css/**/*.css')
-    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(gulp.dest('docs/assets/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -100,7 +100,7 @@ gulp.task('css', function () {
 
 gulp.task('js', function () {
   return gulp.src('app/js/**/*.js')
-    .pipe(gulp.dest('dist/assets/js'))
+    .pipe(gulp.dest('docs/assets/js'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -115,7 +115,7 @@ gulp.task('compile_sass', function () {
     .pipe(cssbeautify({
       indent: '  '
     }))
-    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(gulp.dest('docs/assets/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -127,7 +127,7 @@ gulp.task('compile_haml', function () {
     .pipe(htmlbeautify({
       "indent_size": 2,
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -147,7 +147,7 @@ gulp.task('default', ['browserSync', 'compile_haml', 'compile_sass', 'css', 'js'
 
 
 gulp.task('set', function (callback) {
-  runSequence('clean:dist', 'add_jquery',
+  runSequence('clean:docs', 'add_jquery',
     ['compile_haml', 'compile_sass', 'images', 'fonts', 'css', 'js']
   )
 });

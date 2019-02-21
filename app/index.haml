@@ -5,27 +5,22 @@
 !!!
 %html{:lang => "en"}
   = render ('app/partials/head.haml')
+  - $action_name = 'index'
   %body
     #page
       %a.js-burgue-nav-toggle.burgue-nav-toggle{:href => "#"}
         %i
       = render ('app/partials/aside/_aside.haml')
       #main
-        .hero-wrap.hero-wrap-2.js-fullheight{"data-stellar-background-ratio" => "0.5", :style => "background-image: url(assets/img/bg_5.jpg);"}
+        .wrapper-main.wrapper-main-2.js-fullheight{"data-stellar-background-ratio" => "0.5", :style => "background-image: url(assets/img/bg_5.webp);"}
           .overlay
-          .js-fullheight.d-flex.justify-content-center.align-items-center
-            .col-md-8.text.text-center
-              .img.mb-4{:style => "background-image: url(assets/img/author.png); background-position: center center;"}
-              .desc
-                %h2.subheading Hello I'm
-                %h1.mb-4 Gladibeth Franco
-                -# %h2.subheading Frontend Web Devoloper
-                %p.mb-4
-                  Frontend Web Devoloper
-                  -# I am A Web Developer Far far away, behind the word mountains, far from the countries Vokalia and
-                  -# Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                  -# Semantics, a large language ocean.
-                  .btn-download
-                    %a{:href => "assets/pdf/GladibethFranco-cv.pdf", download:"", target: "_blank"} Download CV
+          .d-flex.justify-content-center.align-items-center{style: "height: 800px !important;"}
+            .col-md-8.text.text-center  
+              %h2.subheading Hello I'm
+              %h1.mb-2 Gladibeth Franco
+              %p.mb-4
+                Frontend Web Devoloper
+                .btn-download
+                  %a{:href => "assets/img/GladibethFranco-cv.pdf", download:"", target: "_blank"} Download CV
     = render ('app/partials/footer.haml')
     

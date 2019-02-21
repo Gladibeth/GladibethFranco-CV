@@ -6,6 +6,7 @@
 %html{:lang => "en"}
   %head
     = render ('app/partials/head.haml')
+    - $action_name = 'portfolio'
   %body
     #page
       %a.js-burgue-nav-toggle.burgue-nav-toggle{:href => "#"}
@@ -17,35 +18,33 @@
           .technology
             .row.no-gutters
               .col-md-4
-                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://digimartve.com/", :style => "background-image: url(assets/img/image_1.png);"}
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://caderco.slicegroup.co/", :style => "background-image: url(assets/img/image_4.webp);"}
                   .overlay
                   .text.text-center
-                    %h3 Digimart
+                    %h3 Caderco
                     %span Technology
               .col-md-4
-                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://sicegroup.co/", :style => "background-image: url(assets/img/image_2.png);"}
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://sicegroup.co/", :style => "background-image: url(assets/img/image_2.webp);"}
                   .overlay
                   .text.text-center
                     %h3 Slice Group
                     %span Technology
               .col-md-4
-                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "http://photogrammar.com/", :style => "background-image: url(assets/img/image_3.png);"}
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "http://photogrammar.com/", :style => "background-image: url(assets/img/image_3.webp);  background-size: contain;"}
                   .overlay
                   .text.text-center
                     %h3 Photogrammar
                     %span Technology
               .col-md-4
-                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://caderco.slicegroup.co/", :style => "background-image: url(assets/img/image_4.png);"}
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "#", :style => "background-image: url(assets/img/image_5.webp); background-size: contain;"}
                   .overlay
                   .text.text-center
-                    %h3 Caderco
+                    %h3 Astivik
                     %span Technology
-              -# .col-md-4
-              -#   %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "#", :style => "background-image: url(assets/img/image_5.png);"}
-              -#     .overlay
-              -#     .text.text-center
-              -#       %h3 Astivik
-              -#       %span Technology
-              
-
+              .col-md-4
+                %a.technology-entry.img.d-flex.justify-content-center.align-items-center{:href => "https://digimartve.com/", :style => "background-image: url(assets/img/image_1.webp);"}
+                  .overlay
+                  .text.text-center
+                    %h3 Digimart
+                    %span Technology
     = render ('app/partials/footer.haml')

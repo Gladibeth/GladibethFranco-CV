@@ -6,12 +6,12 @@
 %html{:lang => "en"}
   %head
     = render ('app/partials/head.haml')
+    - $action_name = 'work'
   %body
     #page
       %a.js-burgue-nav-toggle.burgue-nav-toggle{:href => "#"}
         %i
       = render ('app/partials/aside/_aside.haml')
-  
       #main
         %section.mytabs_area.p_120
           .container
@@ -28,50 +28,33 @@
                       %span
                       .media
                         .d-flex
-                          %p March 2017 to present
-                        .media-body
+                          %p March 2017 current
+                        .body-work
                           %h4 Frontend Developer
                           %p  
                             Slice Group Agency Digital
-                            
-                            -# = succeed "Santa" do
-                            -#   %br/
-                    -# %li
-                    -#   %span
-                    -#   .media
-                    -#     .d-flex
-                    -#       %p March 2017 to present
-                    -#     .media-body
-                    -#       %h4 Colorlib
-                    -#       %p
-                    -#         Senior Web Developer
-                    -#         = succeed "Santa" do
-                    -#           %br/
-                  
                 #profile.tab-pane.fade{"aria-labelledby" => "profile-tab", :role => "tabpanel"}
                   %ul.list
                     %li
                       %span
                       .media
                         .d-flex
-                          %p March 2014 to present
-                        .media-body
+                          %p March 2014 current
+                        .body-work
                           %h4 Systems Engineer
                           %p 
-                            National Experimental University of the Armen Forces.
-                            
-                            
+                            National Experimental University of the Armen Forces. 
+                            %br/
+                            Expected graduation: 2019
                     %li
                       %span
                       .media
                         .d-flex
                           %p March 2016 
-                        .media-body{style: "margin-left: 80px;"}
+                        .body-work{style: "margin-left: 80px;"}
                           %h4 
                             Course 
                             %small (HTML - CSS - JAVASCRIP)
                           %p
                             Slice Group
-                            
-
     = render ('app/partials/footer.haml')

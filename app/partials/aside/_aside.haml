@@ -5,16 +5,16 @@
       %span .
   %nav#main-menu{:role => "navigation"}
     %ul#navbarNav
-      %li
-        %a.item.active{:href => "index.html"} About
-      %li
-        %a.item{:href => "skills.html"} Skills
-      %li
-        %a.item{:href => "work.html"} Work Experience
-      %li
-        %a.item{:href => "portfolio.html"} Portfolio
-      %li
-        %a.item{:href => "contact.html"} Contact
+      %li.link
+        %a.item{:href => "index.html", class: "#{$action_name == 'index' ? 'active' : ''}"} About
+      %li.link
+        %a.item{:href => "skills.html", class: "#{$action_name == 'skills' ? 'active' : ''}"} Skills
+      %li.link
+        %a.item{:href => "work.html", class: "#{$action_name == 'work' ? 'active' : ''}"} Work Experience
+      %li.link
+        %a.item{:href => "portfolio.html", class: "#{$action_name == 'portfolio' ? 'active' : ''}"} Portfolio
+      %li.link
+        %a.item{:href => "contact.html", class: "#{$action_name == 'contact' ? 'active' : ''}"} Contact
   .aside-footer
     %ul
       %li
@@ -23,9 +23,7 @@
       %li
         %a{:href => "https://github.com/Gladibeth"}
           %i.fa.fa-github
-      %li
-        %a{:href => "https://www.facebook.com/gladibeth.franco"}
-          %i.fa.fa-facebook
       -# %li
-      -#   %a{:href => "#"}
-      -#     %i.fa.fa-google-plus
+      -#   %a{:href => "https://www.facebook.com/gladibeth.franco"}
+      -#     %i.fa.fa-facebook
+    

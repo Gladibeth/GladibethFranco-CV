@@ -6,6 +6,7 @@
 %html{:lang => "en"}
   %head
     = render ('app/partials/head.haml')
+    - $action_name = 'contact'
   %body
     #page
       %a.js-burgue-nav-toggle.burgue-nav-toggle{:href => "#"}
@@ -33,19 +34,4 @@
                 %p
                   %span Email:
                 %a{:href => "mailto:gladibethdelosa@gmail.com"} Gladibethdelosa@gmail.com
-             
-            -# .row.block-9
-            -#   .col-md-6.order-md-last.pr-md-5
-            -#     %form{:action => "#"}
-            -#       .form-group
-            -#         %input.form-control{:placeholder => "Your Name", :type => "text"}/
-            -#       .form-group
-            -#         %input.form-control{:placeholder => "Your Email", :type => "text"}/
-            -#       .form-group
-            -#         %textarea.form-control{:cols => "30", :id => "", :name => "", :placeholder => "Message", :rows => "7"}
-            -#       .form-group
-            -#         %input.btn.btn-primary.py-3.px-4.float-right{:type => "submit", :value => "Send Message"}/
-            -#   .col-md-6
-            -#     #map
-    
     = render ('app/partials/footer.haml')
