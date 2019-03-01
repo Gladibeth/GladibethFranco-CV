@@ -9103,7 +9103,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Montserrat", system-ui;
   background: #fff;
   font-size: 15px;
   line-height: 1.8;
@@ -9153,7 +9153,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.5;
   color: #0d0e18;
   font-weight: 400;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Poppins", system-ui;
 }
 
 #page {
@@ -9241,7 +9241,7 @@ h1, h2, h3, h4, h5,
   text-decoration: none;
   position: relative;
   padding: 10px 0;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Montserrat", system-ui;
   font-size: 17px;
   transition: 0.3s 300ms linear 0s;
 }
@@ -9950,7 +9950,7 @@ textarea.form-control {
   font-size: 13px;
   font-weight: 500;
   color: #e10051;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Montserrat", system-ui;
   border: 1px solid #e10051;
   background: rgba(255, 255, 255, 0.1);
 }
