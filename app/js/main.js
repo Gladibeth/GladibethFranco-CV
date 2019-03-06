@@ -45,15 +45,6 @@ AOS.init({
 
   "use strict";
 
-  // $(window).stellar({
-  //   responsive: true,
-  //   parallaxBackgrounds: true,
-  //   parallaxElements: true,
-  //   horizontalScrolling: false,
-  //   hideDistantElements: false,
-  //   scrollProperty: 'scroll'
-  // });
-
 
   var fullHeight = function () {
 
@@ -111,34 +102,6 @@ AOS.init({
   };
   mobileMenuOutsideClick();
 
-  var carousel = function () {
-    $('.home-slider').owlCarousel({
-      loop: true,
-      autoplay: true,
-      margin: 0,
-      animateOut: 'fadeOut',
-      animateIn: 'fadeIn',
-      nav: false,
-      autoplayHoverPause: false,
-      items: 1,
-      navText: ["<span class='ion-md-arrow-back'></span>", "<span class='ion-chevron-right'></span>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 1
-        }
-      }
-    });
-
-  };
-  carousel();
-
-
 
   var contentWayPoint = function () {
     var i = 0;
@@ -175,41 +138,6 @@ AOS.init({
     }, { offset: '95%' });
   };
   contentWayPoint();
-
-
-  // magnific popup
-  $('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
-    }
-  });
-
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false
-  });
-
-
-
 
 })(jQuery);
 
