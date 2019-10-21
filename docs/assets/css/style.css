@@ -9129,7 +9129,8 @@ body.offcanvas #aside {
   transition: .3s all ease;
 }
 
-body.offcanvas #main, body.offcanvas .burgue-nav-toggle {
+body.offcanvas #main,
+    body.offcanvas .burgue-nav-toggle {
   top: 0;
   -moz-transform: translateX(270px);
   -webkit-transform: translateX(270px);
@@ -9149,8 +9150,16 @@ a:hover, a:focus {
   outline: none !important;
 }
 
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
   line-height: 1.5;
   color: #0d0e18;
   font-weight: 400;
@@ -9545,7 +9554,7 @@ h1, h2, h3, h4, h5,
 /* My Works
 ============================================================================================ */
 .technology-entry {
-  height: 300px;
+  height: 190px;
   display: block;
   z-index: 0;
   position: relative;
@@ -9788,7 +9797,7 @@ textarea.form-control {
 .wrapper-main,
 .blog-img,
 .user-img {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
